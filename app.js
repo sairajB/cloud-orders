@@ -1,12 +1,13 @@
 const http = require("http");
 
 const port = process.env.PORT || 8080;
-const version = process.env.APP_VERSION || "1.0.0";
+const version = process.env.APP_VERSION || "2.0.0";
 const environment = process.env.APP_ENV || "cloud";
 
 const orders = [
   { id: "order-1001", customerId: "cust-01", amount: 4500, status: "PAID", city: "Bengaluru" },
-  { id: "order-1002", customerId: "cust-02", amount: 2800, status: "CREATED", city: "Mysuru" }
+  { id: "order-1002", customerId: "cust-02", amount: 2800, status: "CREATED", city: "Mysuru" },
+  { id: "order-1003", customerId: "cust-03", amount: 7200, status: "SHIPPED", city: "Hubballi"}
 ];
 
 const server = http.createServer((request, response) => {
